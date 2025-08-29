@@ -1,0 +1,46 @@
+services:
+  # ==================================================
+  blog-server:
+    container_name: "blog-server"
+    build:
+      context: ./blog-server-recruitment-task
+    depends_on:
+      - rabbitmq
+    ports:
+      - "8081:8081"
+    environment:
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+    networks:
+      - shared-network
+
+
+  notification-server:
+    container_name: "notification-server"
+    build:
+      context: ./notifications-server-recruitment-task
+    depends_on:
+      - blog-server
+      - rabbitmq
+    ports:
+      - "8082:8082"
+    environment:
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+    networks:
+      - shared-network
+
+  # ==================================================
+
+  rabbitmq:
+    container_name: "rabbitmq"
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - shared-network
+
+  # ==================================================
+
+networks:
+  shared-network:
+    driver: bridge
