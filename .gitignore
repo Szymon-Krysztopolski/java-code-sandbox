@@ -1,4 +1,6 @@
 # General
 .idea
 .vscode
+
+logs
 .env
