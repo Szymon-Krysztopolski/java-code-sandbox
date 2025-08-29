@@ -1,9 +1,9 @@
 services:
   # ==================================================
   blog-server:
-    container_name: "blog-server"
+    container_name: "blog-service"
     build:
-      context: ./blog-server-recruitment-task
+      context: ./blog-service
     depends_on:
       - rabbitmq
     ports:
@@ -15,9 +15,9 @@ services:
 
 
   notification-server:
-    container_name: "notification-server"
+    container_name: "notification-service"
     build:
-      context: ./notifications-server-recruitment-task
+      context: ./notification-service
     depends_on:
       - blog-server
       - rabbitmq
