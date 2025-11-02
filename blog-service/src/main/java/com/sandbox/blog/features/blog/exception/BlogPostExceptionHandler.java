@@ -1,4 +1,4 @@
-package com.sandbox.blog.server.features.blog.exception;
+package com.sandbox.blog.features.blog.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

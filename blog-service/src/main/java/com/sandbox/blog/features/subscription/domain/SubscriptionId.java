@@ -1,4 +1,4 @@
-package com.sandbox.blog.server.features.subscription.domain;
+package com.sandbox.blog.features.subscription.domain;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

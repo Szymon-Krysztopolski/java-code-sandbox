@@ -1,4 +1,4 @@
-package com.sandbox.blog.server.features.healthcheck;
+package com.sandbox.blog.features.healthcheck;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

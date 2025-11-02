@@ -1,8 +1,8 @@
-package com.sandbox.blog.server.features.subscription;
+package com.sandbox.blog.features.subscription;
 
-import com.sandbox.blog.server.features.subscription.domain.Subscription;
-import com.sandbox.blog.server.features.subscription.domain.SubscriptionId;
-import com.sandbox.blog.server.features.subscription.dto.SubscriptionRequest;
+import com.sandbox.blog.features.subscription.domain.Subscription;
+import com.sandbox.blog.features.subscription.domain.SubscriptionId;
+import com.sandbox.blog.features.subscription.dto.SubscriptionRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

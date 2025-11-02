@@ -1,6 +1,6 @@
-package com.sandbox.blog.server.features.subscription.domain;
+package com.sandbox.blog.features.subscription.domain;
 
-import com.sandbox.blog.server.features.user.domain.User;
+import com.sandbox.blog.features.user.domain.User;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;

@@ -1,8 +1,8 @@
-package com.sandbox.blog.server.features.notification;
+package com.sandbox.blog.features.notification;
 
-import com.sandbox.blog.server.features.notification.domain.Notification;
-import com.sandbox.blog.server.features.subscription.SubscriptionService;
-import com.sandbox.blog.server.features.user.domain.User;
+import com.sandbox.blog.features.notification.domain.Notification;
+import com.sandbox.blog.features.subscription.SubscriptionService;
+import com.sandbox.blog.features.user.domain.User;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;

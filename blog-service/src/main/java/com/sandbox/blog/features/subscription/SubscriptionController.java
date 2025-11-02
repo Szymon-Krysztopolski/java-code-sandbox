@@ -1,8 +1,8 @@
-package com.sandbox.blog.server.features.subscription;
+package com.sandbox.blog.features.subscription;
 
-import com.sandbox.blog.server.common.StatusResponse;
-import com.sandbox.blog.server.features.subscription.domain.Subscription;
-import com.sandbox.blog.server.features.subscription.dto.SubscriptionRequest;
+import com.sandbox.blog.common.StatusResponse;
+import com.sandbox.blog.features.subscription.domain.Subscription;
+import com.sandbox.blog.features.subscription.dto.SubscriptionRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;

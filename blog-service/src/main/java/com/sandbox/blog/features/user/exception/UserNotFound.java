@@ -1,4 +1,4 @@
-package com.sandbox.blog.server.features.user.exception;
+package com.sandbox.blog.features.user.exception;
 
 public class UserNotFound extends RuntimeException {
     public UserNotFound() {

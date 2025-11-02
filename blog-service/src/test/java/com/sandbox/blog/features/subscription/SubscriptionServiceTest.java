@@ -1,12 +1,12 @@
-package com.sandbox.blog.server.features.subscription;
+package com.sandbox.blog.features.subscription;
 
-import com.sandbox.blog.server.features.subscription.domain.Subscription;
-import com.sandbox.blog.server.features.subscription.domain.SubscriptionId;
-import com.sandbox.blog.server.features.subscription.exception.SelfSubscriptionException;
-import com.sandbox.blog.server.features.subscription.exception.SubscriptionAlreadyExistsException;
-import com.sandbox.blog.server.features.subscription.exception.SubscriptionNotFoundException;
-import com.sandbox.blog.server.features.user.UserService;
-import com.sandbox.blog.server.features.user.domain.User;
+import com.sandbox.blog.features.subscription.domain.Subscription;
+import com.sandbox.blog.features.subscription.domain.SubscriptionId;
+import com.sandbox.blog.features.subscription.exception.SelfSubscriptionException;
+import com.sandbox.blog.features.subscription.exception.SubscriptionAlreadyExistsException;
+import com.sandbox.blog.features.subscription.exception.SubscriptionNotFoundException;
+import com.sandbox.blog.features.user.UserService;
+import com.sandbox.blog.features.user.domain.User;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

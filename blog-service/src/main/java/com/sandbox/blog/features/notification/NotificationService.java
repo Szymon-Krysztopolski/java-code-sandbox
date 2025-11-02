@@ -1,8 +1,8 @@
-package com.sandbox.blog.server.features.notification;
+package com.sandbox.blog.features.notification;
 
-import com.sandbox.blog.server.features.notification.domain.Notification;
-import com.sandbox.blog.server.features.subscription.SubscriptionService;
-import com.sandbox.blog.server.features.user.domain.User;
+import com.sandbox.blog.features.notification.domain.Notification;
+import com.sandbox.blog.features.subscription.SubscriptionService;
+import com.sandbox.blog.features.user.domain.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
-import static com.sandbox.blog.server.features.notification.Constants.NOTIFICATION_QUEUE_NAME;
+import static com.sandbox.blog.features.notification.Constants.NOTIFICATION_QUEUE_NAME;
 
 @Slf4j
 @Service

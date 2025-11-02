@@ -1,4 +1,4 @@
-package com.sandbox.blog.server.features.notification.domain;
+package com.sandbox.blog.features.notification.domain;
 
 import java.util.UUID;
 

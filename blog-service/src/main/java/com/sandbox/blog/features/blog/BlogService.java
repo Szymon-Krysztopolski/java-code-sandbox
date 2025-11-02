@@ -1,12 +1,12 @@
-package com.sandbox.blog.server.features.blog;
+package com.sandbox.blog.features.blog;
 
-import com.sandbox.blog.server.features.blog.domain.BlogPost;
-import com.sandbox.blog.server.features.blog.dto.BlogPostDto;
-import com.sandbox.blog.server.common.StatusResponse;
-import com.sandbox.blog.server.features.blog.exception.BlogPostNotFound;
-import com.sandbox.blog.server.features.notification.NotificationService;
-import com.sandbox.blog.server.features.user.UserService;
-import com.sandbox.blog.server.features.user.domain.User;
+import com.sandbox.blog.features.blog.domain.BlogPost;
+import com.sandbox.blog.features.blog.dto.BlogPostDto;
+import com.sandbox.blog.common.StatusResponse;
+import com.sandbox.blog.features.blog.exception.BlogPostNotFound;
+import com.sandbox.blog.features.notification.NotificationService;
+import com.sandbox.blog.features.user.UserService;
+import com.sandbox.blog.features.user.domain.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

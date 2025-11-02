@@ -1,4 +1,4 @@
-package com.sandbox.blog.server.features.healthcheck;
+package com.sandbox.blog.features.healthcheck;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.annotation.Aspect;

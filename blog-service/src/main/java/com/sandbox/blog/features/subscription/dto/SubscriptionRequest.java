@@ -1,6 +1,6 @@
-package com.sandbox.blog.server.features.subscription.dto;
+package com.sandbox.blog.features.subscription.dto;
 
-import com.sandbox.blog.server.common.JsonDto;
+import com.sandbox.blog.common.JsonDto;
 
 import java.util.UUID;
 

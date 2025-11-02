@@ -1,7 +1,7 @@
-package com.sandbox.blog.server.features.blog.dto;
+package com.sandbox.blog.features.blog.dto;
 
-import com.sandbox.blog.server.common.JsonDto;
-import com.sandbox.blog.server.features.blog.domain.BlogPost;
+import com.sandbox.blog.common.JsonDto;
+import com.sandbox.blog.features.blog.domain.BlogPost;
 import lombok.Builder;
 
 import java.util.Date;

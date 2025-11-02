@@ -1,4 +1,4 @@
-package com.sandbox.blog.server.features.user.domain;
+package com.sandbox.blog.features.user.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

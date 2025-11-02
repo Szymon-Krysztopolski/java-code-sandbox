@@ -1,8 +1,8 @@
-package com.sandbox.blog.server.features.blog;
+package com.sandbox.blog.features.blog;
 
-import com.sandbox.blog.server.common.StatusResponse;
-import com.sandbox.blog.server.features.blog.dto.BlogPostDto;
-import com.sandbox.blog.server.features.blog.exception.BlogPostNotFound;
+import com.sandbox.blog.common.StatusResponse;
+import com.sandbox.blog.features.blog.dto.BlogPostDto;
+import com.sandbox.blog.features.blog.exception.BlogPostNotFound;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

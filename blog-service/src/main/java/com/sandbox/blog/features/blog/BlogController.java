@@ -1,7 +1,7 @@
-package com.sandbox.blog.server.features.blog;
+package com.sandbox.blog.features.blog;
 
-import com.sandbox.blog.server.features.blog.dto.BlogPostDto;
-import com.sandbox.blog.server.common.StatusResponse;
+import com.sandbox.blog.features.blog.dto.BlogPostDto;
+import com.sandbox.blog.common.StatusResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

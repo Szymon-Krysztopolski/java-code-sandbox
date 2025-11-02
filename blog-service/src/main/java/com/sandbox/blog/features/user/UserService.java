@@ -1,7 +1,7 @@
-package com.sandbox.blog.server.features.user;
+package com.sandbox.blog.features.user;
 
-import com.sandbox.blog.server.features.user.domain.User;
-import com.sandbox.blog.server.features.user.exception.UserNotFound;
+import com.sandbox.blog.features.user.domain.User;
+import com.sandbox.blog.features.user.exception.UserNotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

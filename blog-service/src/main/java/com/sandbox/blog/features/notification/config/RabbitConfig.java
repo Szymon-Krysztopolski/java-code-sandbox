@@ -1,4 +1,4 @@
-package com.sandbox.blog.server.features.notification.config;
+package com.sandbox.blog.features.notification.config;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
@@ -8,7 +8,7 @@ import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import static com.sandbox.blog.server.features.notification.Constants.NOTIFICATION_QUEUE_NAME;
+import static com.sandbox.blog.features.notification.Constants.NOTIFICATION_QUEUE_NAME;
 
 @Configuration
 public class RabbitConfig {

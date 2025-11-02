@@ -1,7 +1,7 @@
-package com.sandbox.blog.server.features.blog.domain;
+package com.sandbox.blog.features.blog.domain;
 
-import com.sandbox.blog.server.features.blog.dto.BlogPostDto;
-import com.sandbox.blog.server.features.user.domain.User;
+import com.sandbox.blog.features.blog.dto.BlogPostDto;
+import com.sandbox.blog.features.user.domain.User;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;

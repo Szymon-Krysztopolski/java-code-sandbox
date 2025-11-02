@@ -1,4 +1,4 @@
-package com.sandbox.blog.server.common;
+package com.sandbox.blog.common;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

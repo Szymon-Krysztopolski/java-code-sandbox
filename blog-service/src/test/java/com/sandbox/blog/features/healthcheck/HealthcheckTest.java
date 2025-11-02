@@ -1,4 +1,4 @@
-package com.sandbox.blog.server.features.healthcheck;
+package com.sandbox.blog.features.healthcheck;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
