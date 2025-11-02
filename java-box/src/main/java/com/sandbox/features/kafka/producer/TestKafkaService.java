@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.Random;
+import java.util.UUID;
+
 @Slf4j
 @Service
 public class TestKafkaService {
@@ -22,6 +25,13 @@ public class TestKafkaService {
 
     public void sendSampleMessage(String message) {
         log.info("Processing...");
-        kafkaTemplate.send(topicName, message);
+        try {
+            Thread.sleep(1000 + new Random().nextInt(100));
+        } catch (InterruptedException e) {
+            log.error("Sleep exception.", e);
+            throw new RuntimeException(e);
+        }
+
+        kafkaTemplate.send(topicName, message + "-" + UUID.randomUUID());
     }
 }
