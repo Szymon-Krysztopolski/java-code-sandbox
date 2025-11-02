@@ -3,4 +3,6 @@
 .vscode
 
 logs
+_logs
+
 .env
