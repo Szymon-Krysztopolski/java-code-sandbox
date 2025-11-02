@@ -41,6 +41,37 @@ services:
 
   # ==================================================
 
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD}
+      - MONGO_INITDB_DATABASE=project
+    volumes:
+      - mongo-data:/data/db
+
+  mongo-express:
+    image: mongo-express:latest
+    restart: always
+    depends_on:
+      - mongodb
+    ports:
+      - "8090:8081"
+    environment:
+      - ME_CONFIG_MONGODB_URL=mongodb://${MONGO_ROOT_USERNAME}:${MONGO_ROOT_PASSWORD}@mongodb:27017/
+      - ME_CONFIG_MONGODB_ENABLE_ADMIN=false
+      - ME_CONFIG_MONGODB_AUTH_DATABASE=admin
+      - ME_CONFIG_BASICAUTH_USERNAME=${MONGOEXPRESS_LOGIN}
+      - ME_CONFIG_BASICAUTH_PASSWORD=${MONGOEXPRESS_PASSWORD}
+
+  # ==================================================
+
+volumes:
+  mongo-data:
+    driver: local
+
 networks:
   shared-network:
     driver: bridge
