@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sandbox</groupId>
-    <artifactId>java-box</artifactId>
+    <artifactId>code-sandbox</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>java-box</name>
+    <name>code-sandbox</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
