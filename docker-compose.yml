@@ -8,6 +8,7 @@ services:
       - kafka-1
       - kafka-2
       - kafka-3
+      - localstack
     ports:
       - "8080:8080"
     environment:
@@ -17,6 +18,26 @@ services:
       KAFKA_REPLICATION_FACTOR: ${KAFKA_REPLICATION_FACTOR}
     networks:
       - shared-network
+
+  # ==================================================
+
+  localstack:
+    image: localstack/localstack
+    container_name: localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - DEBUG=0
+      - SKIP_SSL_CERT_DOWNLOAD=1
+      - SERVICES=secretsmanager
+      - AWS_DEFAULT_REGION=${LOCALSTACK_DEFAULT_REGION}
+      - AWS_ACCESS_KEY_ID=${LOCALSTACK_LOGIN}
+      - AWS_SECRET_ACCESS_KEY=${LOCALSTACK_PASSWORD}
+      - LOCALSTACK_HOST=localstack
+    volumes:
+      - localstack_data:/var/lib/localstack
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./configuration/localstack/init.sh:/etc/localstack/init/ready.d/init.sh
 
   # ==================================================
 
@@ -146,6 +167,8 @@ volumes:
   kafka2-data:
   kafka3-data:
   mongo-data:
+    driver: local
+  localstack_data:
     driver: local
 
 networks:
