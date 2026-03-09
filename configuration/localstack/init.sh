@@ -32,4 +32,13 @@ for SECRET_NAME in "${!secrets[@]}"; do
 
 done
 
+echo "All secrets in LocalStack:"
+# List all secrets and show their values
+for SECRET_NAME in $(awslocal secretsmanager list-secrets --region "$REGION" --query 'SecretList[].Name' --output text); do
+  echo "Secret: $SECRET_NAME"
+  VALUE=$(awslocal secretsmanager get-secret-value --secret-id "$SECRET_NAME" --region "$REGION" --query 'SecretString' --output text)
+  echo "$VALUE"
+  echo "------------------------"
+done
+
 echo "LocalStack initialization finished"

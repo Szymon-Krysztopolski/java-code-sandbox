@@ -5,14 +5,19 @@ services:
     build:
       context: .
     depends_on:
-      - kafka-1
-      - kafka-2
-      - kafka-3
-      - localstack
+      localstack:
+        condition: service_healthy
+      kafka-1:
+        condition: service_started
+      kafka-2:
+        condition: service_started
+      kafka-3:
+        condition: service_started
     ports:
       - "8080:8080"
     environment:
       SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
+      LOCALSTACK_HOST: localstack
       KAFKA_BOOTSTRAP_SERVERS: ${KAFKA_BOOTSTRAP_SERVERS}
       KAFKA_TOPIC_PARTITIONS: ${KAFKA_TOPIC_PARTITIONS}
       KAFKA_REPLICATION_FACTOR: ${KAFKA_REPLICATION_FACTOR}
@@ -23,21 +28,26 @@ services:
 
   localstack:
     image: localstack/localstack
-    container_name: localstack
     ports:
       - "4566:4566"
     environment:
       - DEBUG=0
       - SKIP_SSL_CERT_DOWNLOAD=1
       - SERVICES=secretsmanager
-      - AWS_DEFAULT_REGION=${LOCALSTACK_DEFAULT_REGION}
+      - AWS_DEFAULT_REGION=eu-central-1
       - AWS_ACCESS_KEY_ID=${LOCALSTACK_LOGIN}
       - AWS_SECRET_ACCESS_KEY=${LOCALSTACK_PASSWORD}
-      - LOCALSTACK_HOST=localstack
     volumes:
       - localstack_data:/var/lib/localstack
       - /var/run/docker.sock:/var/run/docker.sock
       - ./configuration/localstack/init.sh:/etc/localstack/init/ready.d/init.sh
+    networks:
+      - shared-network
+    healthcheck:
+      test: [ "CMD", "awslocal", "secretsmanager", "list-secrets", "--region", "eu-central-1" ]
+      interval: 5s
+      timeout: 5s
+      retries: 20
 
   # ==================================================
 
