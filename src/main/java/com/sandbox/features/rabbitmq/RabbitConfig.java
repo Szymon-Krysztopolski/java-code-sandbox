@@ -13,7 +13,7 @@ public class RabbitConfig {
 
     @Bean
     public Queue notificationQueue() {
-        return new Queue("myQueue", false);
+        return new Queue(RabbitConstants.MY_QUEUE, false);
     }
 
     @Bean
